@@ -725,28 +725,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "00566b9aa08e82b5e058d524367231c0951ada839411dbd021a3be28e5963d2b"
 dependencies = [
  "cfg-if",
- "leptos_config 0.4.4 (registry+https://github.com/rust-lang/crates.io-index)",
- "leptos_dom 0.4.4 (registry+https://github.com/rust-lang/crates.io-index)",
- "leptos_macro 0.4.4 (registry+https://github.com/rust-lang/crates.io-index)",
- "leptos_reactive 0.4.4 (registry+https://github.com/rust-lang/crates.io-index)",
- "leptos_server 0.4.4 (registry+https://github.com/rust-lang/crates.io-index)",
- "server_fn 0.4.4 (registry+https://github.com/rust-lang/crates.io-index)",
- "tracing",
- "typed-builder",
-]
-
-[[package]]
-name = "leptos"
-version = "0.4.4"
-source = "git+https://github.com/janpauldahlke/leptos.git?branch=main#e8aa9b24f1c95b9fe223370deac769f0865b9867"
-dependencies = [
- "cfg-if",
- "leptos_config 0.4.4 (git+https://github.com/janpauldahlke/leptos.git?branch=main)",
- "leptos_dom 0.4.4 (git+https://github.com/janpauldahlke/leptos.git?branch=main)",
- "leptos_macro 0.4.4 (git+https://github.com/janpauldahlke/leptos.git?branch=main)",
- "leptos_reactive 0.4.4 (git+https://github.com/janpauldahlke/leptos.git?branch=main)",
- "leptos_server 0.4.4 (git+https://github.com/janpauldahlke/leptos.git?branch=main)",
- "server_fn 0.4.4 (git+https://github.com/janpauldahlke/leptos.git?branch=main)",
+ "leptos_config",
+ "leptos_dom",
+ "leptos_macro",
+ "leptos_reactive",
+ "leptos_server",
+ "server_fn",
  "tracing",
  "typed-builder",
 ]
@@ -756,18 +740,6 @@ name = "leptos_config"
 version = "0.4.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b350982a5a03910384eb66e2cc772bdbcc5376ba915b13d770ba2bd24eb38766"
-dependencies = [
- "config",
- "regex",
- "serde",
- "thiserror",
- "typed-builder",
-]
-
-[[package]]
-name = "leptos_config"
-version = "0.4.4"
-source = "git+https://github.com/janpauldahlke/leptos.git?branch=main#e8aa9b24f1c95b9fe223370deac769f0865b9867"
 dependencies = [
  "config",
  "regex",
@@ -792,42 +764,13 @@ dependencies = [
  "indexmap 2.0.0",
  "itertools",
  "js-sys",
- "leptos_reactive 0.4.4 (registry+https://github.com/rust-lang/crates.io-index)",
+ "leptos_reactive",
  "once_cell",
  "pad-adapter",
  "paste",
  "rustc-hash",
  "serde_json",
- "server_fn 0.4.4 (registry+https://github.com/rust-lang/crates.io-index)",
- "smallvec",
- "tracing",
- "wasm-bindgen",
- "wasm-bindgen-futures",
- "web-sys",
-]
-
-[[package]]
-name = "leptos_dom"
-version = "0.4.4"
-source = "git+https://github.com/janpauldahlke/leptos.git?branch=main#e8aa9b24f1c95b9fe223370deac769f0865b9867"
-dependencies = [
- "async-recursion",
- "cfg-if",
- "drain_filter_polyfill",
- "educe",
- "futures",
- "getrandom",
- "html-escape",
- "indexmap 2.0.0",
- "itertools",
- "js-sys",
- "leptos_reactive 0.4.4 (git+https://github.com/janpauldahlke/leptos.git?branch=main)",
- "once_cell",
- "pad-adapter",
- "paste",
- "rustc-hash",
- "serde_json",
- "server_fn 0.4.4 (git+https://github.com/janpauldahlke/leptos.git?branch=main)",
+ "server_fn",
  "smallvec",
  "tracing",
  "wasm-bindgen",
@@ -854,23 +797,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "leptos_hot_reload"
-version = "0.4.4"
-source = "git+https://github.com/janpauldahlke/leptos.git?branch=main#e8aa9b24f1c95b9fe223370deac769f0865b9867"
-dependencies = [
- "anyhow",
- "camino",
- "indexmap 2.0.0",
- "parking_lot",
- "proc-macro2",
- "quote",
- "rstml",
- "serde",
- "syn 2.0.26",
- "walkdir",
-]
-
-[[package]]
 name = "leptos_macro"
 version = "0.4.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -881,35 +807,13 @@ dependencies = [
  "convert_case",
  "html-escape",
  "itertools",
- "leptos_hot_reload 0.4.4 (registry+https://github.com/rust-lang/crates.io-index)",
+ "leptos_hot_reload",
  "prettyplease",
  "proc-macro-error",
  "proc-macro2",
  "quote",
  "rstml",
- "server_fn_macro 0.4.4 (registry+https://github.com/rust-lang/crates.io-index)",
- "syn 2.0.26",
- "tracing",
- "uuid",
-]
-
-[[package]]
-name = "leptos_macro"
-version = "0.4.4"
-source = "git+https://github.com/janpauldahlke/leptos.git?branch=main#e8aa9b24f1c95b9fe223370deac769f0865b9867"
-dependencies = [
- "attribute-derive",
- "cfg-if",
- "convert_case",
- "html-escape",
- "itertools",
- "leptos_hot_reload 0.4.4 (git+https://github.com/janpauldahlke/leptos.git?branch=main)",
- "prettyplease",
- "proc-macro-error",
- "proc-macro2",
- "quote",
- "rstml",
- "server_fn_macro 0.4.4 (git+https://github.com/janpauldahlke/leptos.git?branch=main)",
+ "server_fn_macro",
  "syn 2.0.26",
  "tracing",
  "uuid",
@@ -920,25 +824,6 @@ name = "leptos_reactive"
 version = "0.4.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f939700caed4d042648a028d39d5feb5da8ae3e3fa4c7235c03ed82c627a1897"
-dependencies = [
- "base64 0.21.2",
- "cfg-if",
- "futures",
- "indexmap 2.0.0",
- "rustc-hash",
- "self_cell",
- "serde",
- "serde-wasm-bindgen",
- "serde_json",
- "slotmap",
- "thiserror",
- "tracing",
-]
-
-[[package]]
-name = "leptos_reactive"
-version = "0.4.4"
-source = "git+https://github.com/janpauldahlke/leptos.git?branch=main#e8aa9b24f1c95b9fe223370deac769f0865b9867"
 dependencies = [
  "base64 0.21.2",
  "cfg-if",
@@ -969,7 +854,7 @@ dependencies = [
  "gloo-net",
  "js-sys",
  "lazy_static",
- "leptos 0.4.4 (registry+https://github.com/rust-lang/crates.io-index)",
+ "leptos",
  "linear-map",
  "log",
  "once_cell",
@@ -992,23 +877,9 @@ checksum = "f0be2b3b0e9b9a32823e0c04f28a7e5de26dff1050098d34f5221d421e823f7c"
 dependencies = [
  "inventory",
  "lazy_static",
- "leptos_reactive 0.4.4 (registry+https://github.com/rust-lang/crates.io-index)",
+ "leptos_reactive",
  "serde",
- "server_fn 0.4.4 (registry+https://github.com/rust-lang/crates.io-index)",
- "thiserror",
- "tracing",
-]
-
-[[package]]
-name = "leptos_server"
-version = "0.4.4"
-source = "git+https://github.com/janpauldahlke/leptos.git?branch=main#e8aa9b24f1c95b9fe223370deac769f0865b9867"
-dependencies = [
- "inventory",
- "lazy_static",
- "leptos_reactive 0.4.4 (git+https://github.com/janpauldahlke/leptos.git?branch=main)",
- "serde",
- "server_fn 0.4.4 (git+https://github.com/janpauldahlke/leptos.git?branch=main)",
+ "server_fn",
  "thiserror",
  "tracing",
 ]
@@ -1603,30 +1474,7 @@ dependencies = [
  "serde",
  "serde_json",
  "serde_qs",
- "server_fn_macro_default 0.4.4 (registry+https://github.com/rust-lang/crates.io-index)",
- "syn 2.0.26",
- "thiserror",
- "xxhash-rust",
-]
-
-[[package]]
-name = "server_fn"
-version = "0.4.4"
-source = "git+https://github.com/janpauldahlke/leptos.git?branch=main#e8aa9b24f1c95b9fe223370deac769f0865b9867"
-dependencies = [
- "ciborium",
- "const_format",
- "gloo-net",
- "js-sys",
- "lazy_static",
- "once_cell",
- "proc-macro2",
- "quote",
- "reqwest",
- "serde",
- "serde_json",
- "serde_qs",
- "server_fn_macro_default 0.4.4 (git+https://github.com/janpauldahlke/leptos.git?branch=main)",
+ "server_fn_macro_default",
  "syn 2.0.26",
  "thiserror",
  "xxhash-rust",
@@ -1648,35 +1496,12 @@ dependencies = [
 ]
 
 [[package]]
-name = "server_fn_macro"
-version = "0.4.4"
-source = "git+https://github.com/janpauldahlke/leptos.git?branch=main#e8aa9b24f1c95b9fe223370deac769f0865b9867"
-dependencies = [
- "const_format",
- "proc-macro-error",
- "proc-macro2",
- "quote",
- "serde",
- "syn 2.0.26",
- "xxhash-rust",
-]
-
-[[package]]
 name = "server_fn_macro_default"
 version = "0.4.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f3e52a50df920d267eb7995c59271949d52cf08f272cf2f899712f9f2ce7f479"
 dependencies = [
- "server_fn_macro 0.4.4 (registry+https://github.com/rust-lang/crates.io-index)",
- "syn 2.0.26",
-]
-
-[[package]]
-name = "server_fn_macro_default"
-version = "0.4.4"
-source = "git+https://github.com/janpauldahlke/leptos.git?branch=main#e8aa9b24f1c95b9fe223370deac769f0865b9867"
-dependencies = [
- "server_fn_macro 0.4.4 (git+https://github.com/janpauldahlke/leptos.git?branch=main)",
+ "server_fn_macro",
  "syn 2.0.26",
 ]
 
@@ -1882,7 +1707,7 @@ checksum = "3528ecfd12c466c6f163363caf2d02a71161dd5e1cc6ae7b34207ea2d42d81ed"
 name = "trying-leptos"
 version = "0.1.0"
 dependencies = [
- "leptos 0.4.4 (git+https://github.com/janpauldahlke/leptos.git?branch=main)",
+ "leptos",
  "leptos_router",
 ]
 
