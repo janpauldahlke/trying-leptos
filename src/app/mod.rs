@@ -45,7 +45,7 @@ pub fn uncontrolled_form(cx: Scope) -> impl IntoView {
             <input
                 type="text"
                 ref=input_element
-                prop:value=name.get()
+                prop:value=move || name.get()
             />
             <p>"name is:  " {name}</p>
         </form>
@@ -54,6 +54,7 @@ pub fn uncontrolled_form(cx: Scope) -> impl IntoView {
 
 #[component]
 pub fn controlled_form(cx: Scope) -> impl IntoView {
+    println!("controlled_form {:?}", cx);
     let (name, set_name) = create_signal(cx, "Controlled".to_string());
     view! { cx,
       <div>
@@ -62,7 +63,7 @@ pub fn controlled_form(cx: Scope) -> impl IntoView {
           on:input=move |ev| {
             set_name.set(event_target_value(&ev));
           }
-          prop:value=name.get()
+          prop:value=move || name.get()
 
         />
         <p>"name is:  " {name}</p>

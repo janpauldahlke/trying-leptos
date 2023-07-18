@@ -10,3 +10,4 @@ edition = "2021"
 leptos = { git = "https://github.com/janpauldahlke/leptos.git", branch = "main", features = [
   "csr",
 ] }
+leptos_router = "0.4.0"
