@@ -18,7 +18,6 @@ fn main() {
 fn Routable(cx: Scope) -> impl IntoView {
     view! { cx,
      <Router>
-
         <header style="height:10vh;width:100%;display:flex;align-items:center;justify-content:center;background:black;">
         <a href="/" style="margin:0 10px;color:white;">Home</a>
         <a href="/counter" style="margin:0 10px;color:white;">Counter</a>
@@ -47,8 +46,6 @@ fn Routable(cx: Scope) -> impl IntoView {
 
         </Routes>
         </main>
-
-
     </Router>
     }
 }
