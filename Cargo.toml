@@ -10,5 +10,4 @@ leptos = { version = "0.4.0", features = ["csr"] }
 #leptos = { git = "https://github.com/janpauldahlke/leptos.git", branch = "main", features = [
 #  "csr",
 leptos_router = { version = "0.4.0", features = ["csr"] }
-styled = "0.1.36"
-stylist = "0.12.1"
+stylers = { git = "https://github.com/abishekatp/stylers.git" }
